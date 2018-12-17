@@ -52,11 +52,7 @@ class MyWidget(QMainWindow):
             self.label_2.adjustSize()
             self.sizeLabel.setText(human_read_format(os.path.getsize(text)))
         elif os.path.isfile(text):
-            if text.split('.')[1] in ['jpg', 'png', 'bmp']:
-                pixmap = QPixmap(text)
-                self.label_2.setPixmap(pixmap)
-                self.label_2.resize(pixmap.width(), pixmap.height())
-            elif text.split('.')[1] == 'txt':
+            if text.split('.')[1] == 'txt':
                 f = open(text, 'r')
                 self.label_2.setText(f.read())
                 self.label_2.adjustSize()
@@ -74,6 +70,9 @@ class MyWidget(QMainWindow):
                 shutil.rmtree(text)
             elif os.path.isfile(text):
                 os.remove(text)
+        self.label_2.setText('Файл удален')
+        self.lineEdit.setText('')
+        self.sizeLabel.setText('')
 
     def copy(self):
         text = self.lineEdit.text()

@@ -225,10 +225,10 @@
       <widget class="QLabel" name="sizeLabel">
        <property name="font">
         <font>
-         <family>Aharoni</family>
-         <pointsize>10</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>Calibri</family>
+         <pointsize>14</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
